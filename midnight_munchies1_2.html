@@ -21,7 +21,7 @@ Midnight Munchies
 ! TXT_MODE 0
 
 PAL 0
-1,6,55
+1,7,62
 2,112,255
 255,255,255
 213,206,240
@@ -30,11 +30,13 @@ PAL 0
 NAME blueprint
 
 PAL 1
-255,204,0
-83,255,0
-200,146,0
-129,169,0
-234,253,255
+57,51,79
+2,112,255
+255,255,255
+213,206,240
+86,91,244
+244,220,185
+NAME 1
 
 ROOM 0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -79,10 +81,10 @@ NAME StartScene
 ITM 2 7,14
 ITM 2 7,15
 ITM 2 7,13
-EXT 7,13 2 7,13
-EXT 7,14 2 7,14
-EXT 7,15 2 7,15
-PAL 0
+EXT 7,13 2 7,13 FX fade_b
+EXT 7,14 2 7,14 FX fade_b
+EXT 7,15 2 7,15 FX fade_b
+PAL 1
 TUNE 1
 
 ROOM 2
@@ -161,10 +163,9 @@ ROOM 4
 NAME INSIDE
 ITM 4 14,8
 ITM 4 3,9
-ITM 4 8,3
-ITM 4 1,2
 ITM 4 2,6
 ITM 4 8,5
+ITM 3 9,8
 EXT 9,12 3 9,12
 EXT 10,12 3 10,12
 PAL 0
@@ -844,7 +845,10 @@ DLG 5
 NAME sprite d dialog
 
 DLG 6
-stay back, Nooo0OooO!
+"""
+hey, leave my sheep alone!
+Get away nooooo
+"""
 NAME item 3 dialog
 
 DLG 7
@@ -854,7 +858,7 @@ NAME item 4 dialog
 DLG 8
 """
 {
-  - {item "4"} == 10 ?
+  - {item "4"} == 8 ?
     ...Tasty! {rbw}THE END{/rbw}
   - else ?
     THE END ...you're still hungry though
